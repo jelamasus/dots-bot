@@ -4,6 +4,8 @@ import { CommonModule } from '@app/common';
 import { ConfigModule } from '@nestjs/config';
 import { ConfigSchema } from '@app/common/objects/config-validator';
 import { BotModule } from 'src/modules/bot/bot.module';
+import { PainterModule } from '@app/painter';
+import { ExecutorModule } from 'src/modules/executor/executor.module';
 
 @Module({
   imports: [
@@ -12,6 +14,8 @@ import { BotModule } from 'src/modules/bot/bot.module';
       validationSchema: ConfigSchema,
       isGlobal: true,
     }),
+    PainterModule,
+    ExecutorModule,
     BotModule,
   ],
 })

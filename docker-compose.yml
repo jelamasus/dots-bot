@@ -1,0 +1,9 @@
+services:
+  bot:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - BOT_TOKEN=
+      - RADIUS=
+      - HORIZONTAL_OFFSET=

@@ -13,13 +13,7 @@
       "entryFile": "index",
       "sourceRoot": "libs/painter/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/painter/tsconfig.lib.json",
-        "assets": [
-          {
-            "include": "assets",
-            "watchAssets": true
-          }
-        ]
+        "tsConfigPath": "libs/painter/tsconfig.lib.json"
       }
     },
     "common": {
@@ -28,7 +22,14 @@
       "entryFile": "index",
       "sourceRoot": "libs/common/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/common/tsconfig.lib.json"
+        "tsConfigPath": "libs/common/tsconfig.lib.json",
+        "assets": [
+          {
+            "include": "assets/**/*",
+            "outDir": "dist/assets",
+            "watchAssets": true
+          }
+        ]
       }
     }
   }

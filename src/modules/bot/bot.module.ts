@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { TelegrafModule } from 'nestjs-telegraf';
 import { BotService } from './bot.service';
+import { ExecutorModule } from '../executor/executor.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { BotService } from './bot.service';
         token: configService.get('BOT_TOKEN'),
       }),
     }),
+    ExecutorModule,
   ],
   providers: [BotService],
 })
