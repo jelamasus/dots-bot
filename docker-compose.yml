@@ -7,3 +7,4 @@ services:
       - BOT_TOKEN=
       - RADIUS=
       - HORIZONTAL_OFFSET=
+    restart: always
