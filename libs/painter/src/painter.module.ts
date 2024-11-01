@@ -34,7 +34,7 @@ import { DOTS_MAP, MAP_IMAGE } from './di/tokens';
               ],
             ];
           })
-          .filter(value => !!value),
+          .filter(value => !!value) as [string, [number, number]][],
       ),
     },
     PainterService,
