@@ -22,6 +22,10 @@ import { DOTS_MAP, MAP_IMAGE } from './di/tokens';
           .map((line) => {
             const [tag, values] = line.split(' ');
 
+            if (!values) {
+              return null;
+            }
+
             return [
               tag,
               values.split(',').map((value) => Number(value)) as [
@@ -29,7 +33,8 @@ import { DOTS_MAP, MAP_IMAGE } from './di/tokens';
                 number,
               ],
             ];
-          }),
+          })
+          .filter(value => !!value),
       ),
     },
     PainterService,
